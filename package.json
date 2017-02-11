@@ -1,19 +1,31 @@
 {
-  "name": "lecan",
+  "name": "html-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Get start with html",
   "main": "index.js",
   "scripts": {
+    "postinstall": "bower install && grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dungps/lecan-landingpage.git"
+    "url": "git+https://github.com/dungps/html-starter.git"
   },
   "author": "Kevin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dungps/lecan-landingpage/issues"
+    "url": "https://github.com/dungps/html-starter/issues"
   },
-  "homepage": "https://github.com/dungps/lecan-landingpage#readme"
+  "homepage": "https://github.com/dungps/html-starter#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-modernizr": "^1.0.2",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  }
 }

@@ -1,0 +1,89 @@
+#sidebar-bg {
+	width: 0%;
+	background-color: @brand-success;
+	right: 0;
+	top: 0;
+	height: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 0;
+	transition: all 1s;
+
+	&.active {
+		width: 40%;
+	}
+}
+
+.masthead {
+	z-index: 0;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+.masthead-img {
+	background-image: url(../images/bg-img.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+
+	img {
+		visibility: hidden;
+	}
+}
+
+.masthead-logo {
+	transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	opacity: 1;
+	transition: all 1s;
+
+	&.active {
+		left: 30%;
+	}
+}
+
+div.placeholder {
+	min-height: 100vh;
+	height: 100%;
+	width: 0px;
+	display: block;
+	background-color: transparent;
+	top: 0px;
+}
+
+section.waypoint {
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+	display: block;
+
+	.left-image {
+		width: 60%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.sidebar {
+		opacity: 1;
+		background-color: transparent;
+		min-height: 100%;
+		min-height: 100vh;
+		padding: 100px 20px;
+		width: 40%;
+		z-index: 9;
+		float: right;
+		clear: both;
+		color: #000;
+	}
+}
