@@ -13,19 +13,24 @@
 	z-index: 0;
 	transition: all .7s;
 
-	&.active {
-		width: 40%;
+	@media (min-width: 640px) {
+		&.active {
+			width: 40%;
+		}
 	}
 }
 
 .masthead {
 	z-index: 0;
-	height: 100vh;
 	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
 	display: block;
+
+	@media (min-width: 640px) {
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
 }
 
 .masthead-img {
@@ -47,45 +52,63 @@
 	top: 50%;
 	opacity: 1;
 	transition: all .7s;
-
-	&.active {
-		left: 30%;
+	@media (min-width: 640px) {
+		&.active {
+			left: 30%;
+		}
 	}
 }
 
-div.placeholder {
-	min-height: 100vh;
-	height: 100%;
-	width: 0px;
-	display: block;
-	background-color: transparent;
-	top: 0px;
+@media(min-width: 640px) {
+	div.placeholder {
+		min-height: 100vh;
+		height: 100%;
+		width: 0px;
+		display: block;
+		background-color: transparent;
+		top: 0px;
+	}
 }
 
 section.waypoint {
-	height: 100vh;
 	width: 100%;
 	z-index: 1;
 	display: block;
 
-	.left-image {
-		width: 60%;
-		height: 100%;
-		position: fixed;
-		top: 0;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		opacity: 0;
-		transition: all .7s;
+	@media (min-height: 640px) {
+		height: 100vh;
+	}
 
-		&.active {
-			opacity: 1;
+	.left-image {
+		width: 100%;
+		height: 100%;
+		transition: all .7s;
+		position: relative;
+		height: 50vh;
+		background-position: bottom center;
+
+		@media (min-width: 640px) {
+			position: fixed;
+			top: 0;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			opacity: 0;
+			width: 60%;
+			height: 100vh;
+
+			&.active {
+				opacity: 1;
+			}
 		}
 
 		img {
 			width: 100%;
 			height: 100%;
+		}
+
+		@media (max-width: 640px) {
+			width: 100%;
 		}
 	}
 
@@ -101,5 +124,52 @@ section.waypoint {
 		clear: both;
 		color: #fff;
 		border-left: 1px solid #000;
+
+		.subhead {
+			line-height: 0;
+			margin-bottom: 1rem;
+		}
+
+		.headline {
+			border-bottom: 2px solid #fff;
+			margin-bottom: 1.8rem;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+
+			&:hover {
+				color :#fff;
+			}
+		}
+
+		@media (max-width: 640px) {
+			background-color: #444745;
+			min-height: 70vh;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	#section-one {
+		.left-image {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 640px) {
+	#section-two .left-image {
+		background-image: url(assets/images/section-2.jpg);
+	}
+
+	#section-three .left-image {
+		background-image: url(assets/images/section-3.jpg);
+	}
+
+	#section-four .left-image {
+		background-image: url(assets/images/section-4.jpg);
 	}
 }
