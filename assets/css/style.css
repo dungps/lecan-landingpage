@@ -9069,16 +9069,73 @@ button.close {
   overflow: visible;
   clip: auto;
 }
+.btn-brand {
+  color: #fff;
+  background-color: #86af49;
+  border-color: #789d41;
+}
+.btn-brand:focus,
+.btn-brand.focus {
+  color: #fff;
+  background-color: #6a8b3a;
+  border-color: #33431c;
+}
+.btn-brand:hover {
+  color: #fff;
+  background-color: #6a8b3a;
+  border-color: #57722f;
+}
+.btn-brand:active,
+.btn-brand.active,
+.open > .dropdown-toggle.btn-brand {
+  color: #fff;
+  background-color: #6a8b3a;
+  border-color: #57722f;
+}
+.btn-brand:active:hover,
+.btn-brand.active:hover,
+.open > .dropdown-toggle.btn-brand:hover,
+.btn-brand:active:focus,
+.btn-brand.active:focus,
+.open > .dropdown-toggle.btn-brand:focus,
+.btn-brand:active.focus,
+.btn-brand.active.focus,
+.open > .dropdown-toggle.btn-brand.focus {
+  color: #fff;
+  background-color: #57722f;
+  border-color: #33431c;
+}
+.btn-brand:active,
+.btn-brand.active,
+.open > .dropdown-toggle.btn-brand {
+  background-image: none;
+}
+.btn-brand.disabled:hover,
+.btn-brand[disabled]:hover,
+fieldset[disabled] .btn-brand:hover,
+.btn-brand.disabled:focus,
+.btn-brand[disabled]:focus,
+fieldset[disabled] .btn-brand:focus,
+.btn-brand.disabled.focus,
+.btn-brand[disabled].focus,
+fieldset[disabled] .btn-brand.focus {
+  background-color: #86af49;
+  border-color: #789d41;
+}
+.btn-brand .badge {
+  color: #86af49;
+  background-color: #fff;
+}
 #sidebar-bg {
   width: 0%;
-  background-color: #5cb85c;
+  background-color: #86af49;
   right: 0;
   top: 0;
   height: 100%;
   height: 100vh;
   position: fixed;
   z-index: 0;
-  transition: all 1s;
+  transition: all .7s;
 }
 #sidebar-bg.active {
   width: 40%;
@@ -9108,7 +9165,7 @@ button.close {
   left: 50%;
   top: 50%;
   opacity: 1;
-  transition: all 1s;
+  transition: all .7s;
 }
 .masthead-logo.active {
   left: 30%;
@@ -9135,6 +9192,15 @@ section.waypoint .left-image {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: all .7s;
+}
+section.waypoint .left-image.active {
+  opacity: 1;
+}
+section.waypoint .left-image img {
+  width: 100%;
+  height: 100%;
 }
 section.waypoint .sidebar {
   opacity: 1;
@@ -9146,7 +9212,8 @@ section.waypoint .sidebar {
   z-index: 9;
   float: right;
   clear: both;
-  color: #000;
+  color: #fff;
+  border-left: 1px solid #000;
 }
 .navbar {
   background-color: transparent;
@@ -9154,7 +9221,7 @@ section.waypoint .sidebar {
   position: fixed;
   width: 100%;
   transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);
-  transition: all 1s;
+  transition: all .7s;
 }
 .navbar.show {
   transform: translate(0%, 0%) matrix(1, 0, 0, 1, 0, 0);
@@ -9169,6 +9236,14 @@ section.waypoint .sidebar {
   color: #fff;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  color: #5cb85c;
+  color: #6a8b3a;
+}
+#site-footer {
+  width: 100%;
+  position: relative;
+  border-top: 1px solid #000;
+  height: 100%;
+  background-color: #fff;
+  padding: 3rem 0;
 }
 /*# sourceMappingURL=style.css.map */
