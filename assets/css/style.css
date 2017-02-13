@@ -9263,6 +9263,7 @@ section.waypoint .sidebar a:hover {
     background-color: #444745;
     min-height: 70vh;
     width: 100%;
+    float: none;
   }
 }
 @media (max-width: 640px) {
@@ -9272,13 +9273,13 @@ section.waypoint .sidebar a:hover {
 }
 @media (min-width: 640px) {
   #section-two .left-image {
-    background-image: url(assets/images/section-2.jpg);
+    background-image: url(../images/section-2.jpg);
   }
   #section-three .left-image {
-    background-image: url(assets/images/section-3.jpg);
+    background-image: url(../images/section-3.jpg);
   }
   #section-four .left-image {
-    background-image: url(assets/images/section-4.jpg);
+    background-image: url(../images/section-4.jpg);
   }
 }
 .navbar {
